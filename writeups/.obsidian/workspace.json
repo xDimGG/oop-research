@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "a76272f8d82ed428",
+    "type": "split",
+    "children": [
+      {
+        "id": "05ddd8435bb87c5b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5761b40198143662",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Cloning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7c44839d04705c02",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3. Answering the Questions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c892312c3398cfbf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2. Cloning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5651b317cb3f307a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Questions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "00a9b247d2c73485",
+    "type": "split",
+    "children": [
+      {
+        "id": "59b73e957ee1ebc3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2506a2b4099b6334",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9c42d06d0e8bcd6d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0adaa96abe53c439",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "090f10cccb74970a",
+    "type": "split",
+    "children": [
+      {
+        "id": "86a6270891d06ed0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "61053955cd335538",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "3. Answering the Questions.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "31346552c4650562",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "3. Answering the Questions.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "65c5cf1e8e621e63",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "097ebe43f95cb2a1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "3. Answering the Questions.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "7c44839d04705c02",
+  "lastOpenFiles": [
+    "Pasted image 20240827210020.png",
+    "Pasted image 20240827205655.png",
+    "Pasted image 20240827205558.png",
+    "2. Cloning.md",
+    "3. Answering the Questions.md",
+    "Pasted image 20240827201047.png",
+    "1. Scraping.md",
+    "Questions.md",
+    "Pasted image 20240826222912.png",
+    "Pasted image 20240826222444.png",
+    "Pasted image 20240826221346.png",
+    "Pasted image 20240826214556.png",
+    "Pasted image 20240826214102.png",
+    "Pasted image 20240826213803.png"
+  ]
+}
