@@ -9,23 +9,24 @@ jre_classes = set(["AbstractAction","AbstractAnnotationValueVisitor6","AbstractA
 wb = openpyxl.load_workbook('out.xlsx')
 
 def test_against_classlist(name, classlist):
+	if '<' in name:
+		name = name.split('<')[0]
+	if '[' in name:
+		name = name.split('[')[0]
+	if 'java.' in name:
+		name = name.split('.')[-1]
+
 	if name in classlist:
 		return True
 	
-	if '<' in name and name.split('<')[0] in classlist:
-		return True
-
-	if '[' in name and name.split('[')[0] in classlist:
-		return True
-
 	return False
 
 def update_sheet(name):
 	ws = wb[name]
-	ws.cell(2, 3, 'is native type?')
-	ws.cell(2, 4, 'is jre class?')
-	ws.cell(2, 5, 'is custom class?')
-	i = 3
+	ws.cell(1, 3, 'is native type?')
+	ws.cell(1, 4, 'is jre class?')
+	ws.cell(1, 5, 'is custom class?')
+	i = 2
 	while ws.cell(i, 1).value != None:
 		v = ws.cell(i, 1).value
 		a = 0

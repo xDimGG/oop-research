@@ -97,7 +97,10 @@ uses_constant_in_and_out_range_count = 0
 uses_constant_in_range_count = 0
 uses_constant_out_range_count = 0
 
+say_file = False
+
 def handle_node(node: Node, constants: dict[str, int]):
+	global say_file
 	global class_uses_both, class_uses_inheritance, class_uses_interfaces, class_uses_neither, total_method_count, does_not_throw, does_not_catch, uses_constant_in_and_out_range_count, uses_constant_in_range_count, uses_constant_out_range_count
 
 	# 1
@@ -123,6 +126,8 @@ def handle_node(node: Node, constants: dict[str, int]):
 	elif node.type == 'method_declaration':
 		lc = node.text.count(b'\n')
 		method_line_counts[lc] += 1
+		# if lc == 0:
+		# 	say_file = True
 
 	# 4, 5, 6, 12
 	if node.type == 'class_body':
@@ -322,11 +327,11 @@ def handle_node(node: Node, constants: dict[str, int]):
 			catches_custom_counts[catches_custom_count] += 1
 
 			# 11
-			if_block_counts[if_block_count] += if_block_count
-			while_block_counts[while_block_count] += while_block_count
-			for_block_counts[for_block_count] += for_block_count
-			enhanced_for_block_counts[enhanced_for_block_count] += enhanced_for_block_count
-			switch_block_counts[switch_block_count] += switch_block_count
+			if_block_counts[if_block_count] += 1
+			while_block_counts[while_block_count] += 1
+			for_block_counts[for_block_count] += 1
+			enhanced_for_block_counts[enhanced_for_block_count] += 1
+			switch_block_counts[switch_block_count] += 1
 
 			# 12
 			if uses_constant_in_range and uses_constant_out_range:
@@ -373,6 +378,9 @@ for root, dirs, files in os.walk('repos\\Java'):
 					for node in traverse_tree(tree):
 						handle_node(node, constants)
 
+					if say_file:
+						say_file = False
+						print(os.path.join(root, file), 'rb')
 					# print(src.decode())
 					# print(tree.root_node.sexp())
 					# exit()
@@ -384,13 +392,13 @@ wb = Workbook()
 
 def save_dict(name, data: dict):
 	ws: Worksheet = wb.create_sheet(name[:31])
-	ws.cell(1, 1, name)
-	ws.cell(2, 1, 'Value')
-	ws.cell(2, 2, 'Quantity')
+	ws.cell(1, 1, 'Value')
+	ws.cell(1, 2, 'Quantity')
+	ws.cell(1, 6, name)
 	for i, (k, v) in enumerate(data.items()):
 		# print(i, k, v)
-		ws.cell(i + 3, 1, k)
-		ws.cell(i + 3, 2, v)
+		ws.cell(i + 2, 1, k)
+		ws.cell(i + 2, 2, v)
 
 # print('(1)', class_member_type_counts, parameter_type_counts, local_var_type_counts)
 # print('(2)', method_parameter_counts)
